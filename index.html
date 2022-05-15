@@ -13,11 +13,9 @@
 
     <div id="app">
 
-
-        <div id="data">
-            <h1>Product Discount Caculator</h1>
-
-            <form action="display_discount.php" method="post">
+        <form action="display_discount.php" method="post">
+            <div id="data">
+                <h1>Product Discount Caculator</h1>
 
                 <label for="product_decscription">Product Decscription</label>
                 <input type="text" id="product_decscription" name="product_decscription" required> <br>
@@ -26,15 +24,15 @@
                 <input type="text" name="list_price" id="list_price" required> <br>
 
                 <label for="discount_percent">Discount Percent</label>
-                <input type="text" name="discount_percent" id="discount_percent">% <br>
-            </form>
+                <input type="text" name="discount_percent" id="discount_percent" required>% <br>
 
-        </div>
-        <div id="button">
-            <label for="btn">&nbsp;</label>
-            <input type="submit" name="btn" id="btn" value="Caculate Discount">
-        </div>
 
+            </div>
+            <div id="button">
+                <label for="btn">&nbsp;</label>
+                <input type="submit" name="btn" id="btn" value="Caculate Discount">
+            </div>
+        </form>
     </div>
 
 </body>

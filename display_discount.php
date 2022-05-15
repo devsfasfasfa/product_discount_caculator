@@ -1,7 +1,22 @@
 <?php
 
+$product_decscription = $_POST['product_decscription'];
+$list_price = $_POST['list_price'];
+$discount_percent = $_POST['discount_percent'];
 
 
+
+
+$discount_amount = $list_price * $discount_percent / 100;
+$discount_price = $list_price - $discount_amount;
+
+// format
+
+
+$list_price_format = '$' . number_format($list_price, 2);
+$standard_discount = $discount_percent . '%';
+$discount_amount_format = '$' . number_format($discount_amount, 2);
+$discount_price_format = '$' . number_format($discount_price, 2);
 
 
 ?>
@@ -20,29 +35,39 @@
 
 <body>
 
-
     <div id="app">
+
 
         <h1>Product Discount Caculator</h1>
 
         <label for="">Product Decscription:</label>
-        <span></span>
-
+        <span></span><?php echo $product_decscription; ?></span> <br>
         <label for="">List Price:</label>
-        <span></span>
+        <span><?php echo  $list_price_format ?></span><br>
 
         <label for="">Standard Discount:</label>
-        <span></span>
+        <span><?php echo $standard_discount; ?></span><br>
 
         <label for="">Discount Amount:</label>
-        <span></span>
+        <span><?php echo $discount_amount_format ?></span><br>
 
         <label for="">Discount Price:</label>
-        <span></span>
+        <span><?php echo $discount_price_format ?></span><br>
+
+        <label for="">&nbsp;</label>
+        <input type="submit" value="Refresh" id="btn">
+
 
 
     </div>
 
+
+    <script>
+        var btn = document.querySelector('#btn');
+        btn.onclick = function() {
+            window.location = '/product_discount_caculator';
+        }
+    </script>
 
 </body>
 
