@@ -62,12 +62,9 @@ $discount_price_format = '$' . number_format($discount_price, 2);
     </div>
 
 
-    <script>
-        var btn = document.querySelector('#btn');
-        btn.onclick = function() {
-            window.location = '/product_discount_caculator';
-        }
-    </script>
+    <script type="text/javscript" src="./assets/js/main.js"> </script>
+
+
 
 </body>
 
